@@ -117,7 +117,7 @@ def main():
                     print("*" * 50)
                     if short_code == 'ex':
                         print("")
-                        print(f'Goodbye {user_name}')
+                        print(f'Thankyou {user_name}')
                         break
                     elif short_code == 'cc':
                         print('Enter your credential details:')
@@ -139,7 +139,7 @@ def main():
                             elif psw_choice == 'ex':
                                 break
                             else:
-                                print('Oops! Wrong option entered. Try again.')
+                                print(' Wrong option entered. Try again.')
                         save_credential(create_credential(user_name, site_name, account_name, password))
                         print(
                             f'Credential Created: Site Name: {site_name} - Account Name: {account_name} - Password: {password}')
@@ -150,17 +150,17 @@ def main():
                                 print(
                                     f'Site Name: {credential.site_name} - Account Name: {credential.account_name} - Password: {credential.password}')
                         else:
-                            print("You don't seem to have any credentials saved yet")
+                            print("No credentials found! ")
                     elif short_code == 'copy':
                         chosen_site = input('Enter the site name for the credential password to copy: ')
                         copy_credential(chosen_site)
                     else:
-                        print('Oops! Wrong option entered. Try again.')
+                        print(' Wrong option entered. Try again.')
             else:
-                print('Oops! Wrong details entered. Try again or Create an Account.')
+                print(' Wrong details entered. Try again or Create an Account.')
         else:
             print("*" * 50)
-            print('Oops! Wrong option entered. Try again.')
+            print(" Wrong option entered. Try again.")
 
 
 if __name__ == '__main__':
